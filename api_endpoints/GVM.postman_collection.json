@@ -1,0 +1,84 @@
+{
+	"variables": [],
+	"info": {
+		"name": "GVM",
+		"_postman_id": "e90fce62-1087-216c-a536-3dfdc4815631",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List of Employees with department",
+			"request": {
+				"url": "http://localhost:8000/list",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Employee",
+			"request": {
+				"url": "http://localhost:8000/add-employe",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"first_name\":\"vivek \",\n\t\"last_name\":\"Singh\",\n\t\"email\":\"ramsingh@gmail.com\",\n\t\"department\":\"it\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Department List for update record",
+			"request": {
+				"url": "http://localhost:8000/department",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update employee details",
+			"request": {
+				"url": "http://localhost:8000/employ-update/62c8ddc92da8bdff6a6ebe2",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t \"first_name\": \"amar\",\n        \"last_name\": \"Prajapati\",\n        \"email\": \"amar12@gmail.com\",\n        \"department_id\": \"62c8dd932027ab704502297d\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee record",
+			"request": {
+				"url": "http://localhost:8000/deleteEmployee/62c8ddc92da8bdff6a6ebe27",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
